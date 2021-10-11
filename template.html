@@ -8,26 +8,43 @@
         margin: 0;
       }
       
-      div {
-        width: 350px;
-        height: 200px;
+      .background {
+        background-color: #555555;
+        height: 130px;
+        width: 600px;
+        margin-top: 10px;
+      }
+
+      .foreground {
+        background-color: #cccccc;
+        margin: 6px 0 6px 6px;
+        height: 118px;
         display: inline-block;
       }
 
-      .square {
-        width: 100px;
+      #top .foreground {
+        width: 32%;
+      }
+
+      #middle .foreground {
+        width: 23.75%
+      }
+
+      #bottom .foreground {
+        width: 48.5%
+      }
+
+      .middle-100 {
         height: 100px;
-        margin-left: 50px;
-        margin-top: 50px;
-        background-color: black;
       }
 
-      #red {
-        background-color: red;
+      .middle-75 {
+        height: 75px;
+        vertical-align: top;
       }
 
-      #blue {
-        background-color: blue;
+      #bottom-left {
+        height: 35px;
       }
 
     </style>
@@ -35,12 +52,16 @@
 
   <body>
 
-    <div id="red">
-      <div class="square"></div>
-      <div class="square"></div>
-    </div><div id="blue">
-      <div class="square"></div>
-      <div class="square"></div>
+    <div id="top" class="background">
+      <div class="foreground"></div><div class="foreground"></div><div class="foreground"></div>
+    </div>
+
+    <div id="middle" class="background">
+      <div class="foreground middle-100"></div><div class="foreground middle-75"></div><div class="foreground middle-100"></div><div class="foreground middle-75"></div>
+    </div>
+
+    <div id="bottom" class="background">
+      <div id="bottom-left" class="foreground bottom"></div><div class="foreground bottom"></div>
     </div>
 
   </body>
